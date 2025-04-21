@@ -1,0 +1,46 @@
+# === Universal ignores ===
+
+# dependencies
+**/node_modules/
+.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+**/coverage/
+
+# debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# environment variables (ignores from root, client, and server)
+.env*
+*.pem
+
+# macOS and misc
+.DS_Store
+
+# TypeScript
+*.tsbuildinfo
+
+# === Client (Next.js) specific ignores ===
+
+client/.next/
+client/out/
+client/build/
+client/next-env.d.ts
+
+# Vercel
+client/.vercel/
+
+# === Server (Express) specific ignores ===
+
+server/dist/
+server/logs/
+server/*.log
